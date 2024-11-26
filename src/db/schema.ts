@@ -7,6 +7,8 @@ export type Post = {
   uri: string
   cid: string
   indexedAt: string
+  postText: string
+  syllables: number
 }
 
 export type SubState = {

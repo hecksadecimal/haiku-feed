@@ -1,3 +1,4 @@
+import { syllable } from 'syllable'
 import {
   OutputSchema as RepoEvent,
   isCommit,
@@ -14,23 +15,23 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     // Just for fun :)
     // Delete before actually using
     for (const post of ops.posts.creates) {
-      console.log(post.record.text)
+      if (syllable(post.record.text) === 17) {
+        console.log(post.record.text)
+      }
     }
 
     const postsToDelete = ops.posts.deletes.map((del) => del.uri)
     const postsToCreate = ops.posts.creates
-      .filter((create) => {
-        // only alf-related posts
-        return create.record.text.toLowerCase().includes('alf')
-      })
       .map((create) => {
-        // map alf-related posts to a db row
         return {
           uri: create.uri,
           cid: create.cid,
           indexedAt: new Date().toISOString(),
+          postText: create.record.text.toLowerCase(),
+          syllables: syllable(create.record.text),
         }
       })
+      .filter((post) => post.syllables === 17)
 
     if (postsToDelete.length > 0) {
       await this.db
