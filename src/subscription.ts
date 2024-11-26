@@ -45,6 +45,7 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
         return {
           ...post,
           syllables: 17,
+          haiku: post.haiku!,
         }
       }
     )

@@ -9,6 +9,7 @@ export type Post = {
   indexedAt: string
   postText: string
   syllables: number
+  haiku: string
 }
 
 export type SubState = {
