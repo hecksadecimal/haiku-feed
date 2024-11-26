@@ -26,7 +26,7 @@ export const handler = async (ctx: AppContext, params: QueryParams) => {
 
   const feed = res.map((row) => ({
     post: row.uri,
-    feed_context: row.haiku,
+    feedContext: row.haiku,
   }))
 
   let cursor: string | undefined
