@@ -21,10 +21,13 @@
     "@atproto/syntax": "^0.3.1",
     "@atproto/xrpc-server": "^0.7.3",
     "better-sqlite3": "^11.6.0",
+    "compromise": "^14.14.2",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "kysely": "^0.27.4",
     "multiformats": "^13.3.1",
+    "nlp-syllables": "^0.0.5",
+    "nlp-syllables-async": "^0.1.2",
     "syllable": "^5.0.1"
   },
   "devDependencies": {

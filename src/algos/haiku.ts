@@ -1,8 +1,13 @@
 import { QueryParams } from '../lexicon/types/app/bsky/feed/getFeedSkeleton'
 import { AppContext } from '../config'
+import { extractHaiku }  from '../util/haikuExtractor'
 
 // max 15 chars
 export const shortname = 'haiku'
+
+export const extractor = (text: string, debug=false) => {
+  return extractHaiku(text, debug)
+}
 
 export const handler = async (ctx: AppContext, params: QueryParams) => {
   let builder = ctx.db

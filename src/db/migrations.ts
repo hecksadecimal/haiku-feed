@@ -17,6 +17,7 @@ migrations['001'] = {
       .addColumn('indexedAt', 'varchar', (col) => col.notNull())
       .addColumn('postText', 'varchar', (col) => col.notNull())
       .addColumn('syllables', 'integer', (col) => col.notNull())
+      .addColumn('haiku', 'varchar', (col) => col.notNull())
       .execute()
     await db.schema
       .createTable('sub_state')
