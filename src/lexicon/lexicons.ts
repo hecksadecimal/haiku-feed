@@ -4687,6 +4687,9 @@ export const schemaDict = {
             type: 'union',
             refs: ['lex:app.bsky.feed.defs#skeletonReasonRepost'],
           },
+          feedContext: {
+            type: 'string',
+          }
         },
       },
       skeletonReasonRepost: {
