@@ -36,7 +36,6 @@
     "typescript": "^5.7.2"
   },
   "engines": {
-    "node": ">= 23",
-    "yarn": "1"
+    "node": ">= 23"
   }
 }
