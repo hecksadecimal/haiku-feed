@@ -272,6 +272,7 @@ export function validateGeneratorViewerState(v: unknown): ValidationResult {
 export interface SkeletonFeedPost {
   post: string
   reason?: SkeletonReasonRepost | { $type: string; [k: string]: unknown }
+  feedContext?: string
   [k: string]: unknown
 }
 
